@@ -1,0 +1,23 @@
+// @ts-nocheck
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+dotenv.config();
+
+const app = express();
+app.use(cors());
+const port = process.env.PORT || 3001;
+
+// Подключаем все роутеры из adapters
+const router = require('./index.js');
+app.use(router);
+
+app.get('/', (req, res) => {
+  res.send('API server is running!');
+});
+
+app.get('/favicon.ico', (req, res) => res.status(204).end());
+
+app.listen(port, () => {
+  console.log(`🚀 API server running on http://localhost:${port}`);
+}); 

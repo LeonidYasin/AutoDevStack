@@ -1,0 +1,50 @@
+{
+  "name": "autodevstack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "fix": "ts-node src/cli/index.ts fix",
+    "generate": "ts-node src/cli/index.ts generate",
+    "create": "ts-node src/cli/index.ts create",
+    "autodevstack": "ts-node src/cli/index.ts",
+    "test": "jest",
+    "api": "ts-node src/adapters/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@huggingface/inference": "^4.5.1",
+    "@prisma/client": "^6.11.1",
+    "@types/axios": "^0.9.36",
+    "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.13",
+    "axios": "^1.10.0",
+    "commander": "^14.0.0",
+    "concurrently": "^9.2.0",
+    "cors": "^2.8.5",
+    "cypress": "^14.5.1",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "jest": "^30.0.4",
+    "next": "^15.3.5",
+    "prisma": "^6.11.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "bin": {
+    "autodevstack": "src/cli/index.ts"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/react": "^19.1.8",
+    "@types/supertest": "^6.0.3",
+    "supertest": "^7.1.3",
+    "ts-jest": "^29.4.0"
+  }
+}

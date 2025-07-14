@@ -1,0 +1,9 @@
+projects/
+.env
+node_modules/
+.env
+*.env
+*.log
+logs/
+projects/
+

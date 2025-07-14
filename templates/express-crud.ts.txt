@@ -1,0 +1,36 @@
+// @ts-nocheck
+import { Router } from 'express';
+const router = Router();
+
+// In-memory users for demo
+let users = [{ id: 1, email: 'test@example.com' }];
+
+router.get('/users', (req, res) => {
+  res.json(users);
+});
+
+router.post('/users', (req, res) => {
+  const user = { id: Date.now(), ...req.body };
+  users.push(user);
+  res.status(201).json(user);
+});
+
+router.get('/users/:id', (req, res) => {
+  const user = users.find(u => u.id == Number(req.params.id));
+  if (!user) return res.sendStatus(404);
+  res.json(user);
+});
+
+router.put('/users/:id', (req, res) => {
+  const idx = users.findIndex(u => u.id == Number(req.params.id));
+  if (idx === -1) return res.sendStatus(404);
+  users[idx] = { ...users[idx], ...req.body };
+  res.json(users[idx]);
+});
+
+router.delete('/users/:id', (req, res) => {
+  users = users.filter(u => u.id != Number(req.params.id));
+  res.sendStatus(204);
+});
+
+export default router; 
