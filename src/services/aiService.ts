@@ -33,6 +33,11 @@ const MODEL_TASK_MAP = [
     defaultTask: 'chat',
   },
   {
+    model: 'Qwen/Qwen1.5-72B-Chat',
+    tasks: ['chat', 'conversational', 'text-generation'],
+    defaultTask: 'chat',
+  },
+  {
     model: 'black-forest-labs/FLUX.1-dev',
     tasks: ['text-to-image'],
     defaultTask: 'text-to-image',

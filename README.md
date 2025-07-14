@@ -37,7 +37,7 @@
 | ------------ | ------------------------------------------- |
 | Язык         | TypeScript (Node.js)                        |
 | AI           | Hugging Face API (`@huggingface/inference`) |
-| Модели       | Mistral-7B-Instruct, Falcon, CodeLLaMA      |
+| Модели       | DeepSeek-V3-Chat, Falcon, CodeLLaMA      |
 | БД           | PostgreSQL + Prisma ORM                     |
 | Backend      | Express.js (CRUD генерация)                 |
 | Frontend     | Next.js + Tailwind                          |
@@ -174,8 +174,8 @@ FIX:
 
 ```env
 HF_TOKEN=hf_xxx_your_access_token
-HF_ENDPOINT=https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2
-HF_MODEL=mistralai/Mistral-7B-Instruct-v0.2
+HF_ENDPOINT=https://api-inference.huggingface.co/models/deepseek-ai/DeepSeek-V3-Chat
+HF_MODEL=deepseek-ai/DeepSeek-V3-Chat
 ```
 
 ---
